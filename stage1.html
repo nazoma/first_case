@@ -1,17 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Stage 1</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>住人たちの謎</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <h2>STAGE 1</h2>
-  <p>「1 + 1 = ?」</p>
+  <main class="container">
+    <header class="hero">
+      <h1>住人たちの謎</h1>
+      <p>
+        広場には、不思議な住人たちがいる。<br>
+        話しかけると、それぞれが謎を出してきた。
+      </p>
+    </header>
 
-  <input type="text" id="answer">
-  <button onclick="checkAnswer()">解答</button>
+    <section class="progress-box">
+      <h2>進行状況</h2>
+      <p><span id="solvedCount">0</span> / 5 問クリア</p>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <section>
+      <h2>住人たち</h2>
+
+      <article class="resident-card">
+        <button class="accordion">① はなの住人</button>
+        <div class="panel">
+          <p class="resident-text">「ようこそ。この世界では、言葉にも花が咲くんだよ。」</p>
+          <div class="question-box">
+            <p>【問題1】ここに問題文を入れる</p>
+            <input type="text" id="answer1" placeholder="こたえを入力" />
+            <button data-question="1">答える</button>
+            <p id="result1" class="result"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="resident-card">
+        <button class="accordion">② ほしの住人</button>
+        <div class="panel">
+          <p class="resident-text">「夜はまだ来ないけれど、星のことばはいつもここにある。」</p>
+          <div class="question-box">
+            <p>【問題2】ここに問題文を入れる</p>
+            <input type="text" id="answer2" placeholder="こたえを入力" />
+            <button data-question="2">答える</button>
+            <p id="result2" class="result"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="resident-card">
+        <button class="accordion">③ こめの住人</button>
+        <div class="panel">
+          <p class="resident-text">「おなかがすくと、考えも止まるからね。まずは一問どうだい？」</p>
+          <div class="question-box">
+            <p>【問題3】ここに問題文を入れる</p>
+            <input type="text" id="answer3" placeholder="こたえを入力" />
+            <button data-question="3">答える</button>
+            <p id="result3" class="result"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="resident-card">
+        <button class="accordion">④ つきの住人</button>
+        <div class="panel">
+          <p class="resident-text">「月は欠けても、ことばの欠けらは消えないよ。」</p>
+          <div class="question-box">
+            <p>【問題4】ここに問題文を入れる</p>
+            <input type="text" id="answer4" placeholder="こたえを入力" />
+            <button data-question="4">答える</button>
+            <p id="result4" class="result"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="resident-card">
+        <button class="accordion">⑤ 近所のおっちゃん</button>
+        <div class="panel">
+          <p class="resident-text">「お、お前……元の世界のやつやろ？ こんなとこで会うとはなぁ。」</p>
+          <div class="question-box">
+            <p>【問題5】ここに問題文を入れる</p>
+            <input type="text" id="answer5" placeholder="こたえを入力" />
+            <button data-question="5">答える</button>
+            <p id="result5" class="result"></p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="midPuzzleSection" class="mid-section hidden">
+      <h2>広場の空気が変わった……</h2>
+      <p>
+        住人たちの謎をすべて解いた瞬間、広場の中央で何かがきらりと光った。<br>
+        5つの答えを入力すると、次の指示が現れるようだ。
+      </p>
+
+      <div class="mid-input-grid">
+        <input type="text" id="midAnswer1" placeholder="こたえ1" />
+        <input type="text" id="midAnswer2" placeholder="こたえ2" />
+        <input type="text" id="midAnswer3" placeholder="こたえ3" />
+        <input type="text" id="midAnswer4" placeholder="こたえ4" />
+        <input type="text" id="midAnswer5" placeholder="こたえ5" />
+      </div>
+
+      <button id="midCheckButton" class="primary-btn">5つの答えをたしかめる</button>
+      <p id="midResult" class="result"></p>
+
+      <div id="midStory" class="hidden story-box">
+        <p>
+          広場にある、<strong>くまとつきを繋ぐ赤いベンチ</strong>へ向かえ。<br>
+          そこに、帰るための手がかりがある。
+        </p>
+        <p>ベンチの飾りの小鳥が、こちらを見ている……。</p>
+        <a class="primary-btn next-link" href="./mid2.html">次へ進む</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./dist/stage1.js"></script>
 </body>
 </html>

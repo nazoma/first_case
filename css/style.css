@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f7f3ff;
+  color: #2d2340;
+  line-height: 1.7;
+}
+
+.container {
+  width: min(920px, 92%);
+  margin: 0 auto;
+  padding: 24px 0 60px;
+}
+
+.hero,
+.progress-box,
+.resident-card,
+.mid-section,
+.story-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.warning {
+  color: #a03d3d;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #e7def7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #8b5cf6;
+  transition: width 0.3s ease;
+}
+
+.accordion {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ede6ff;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.panel {
+  display: none;
+  padding: 16px 4px 4px;
+}
+
+.panel.open {
+  display: block;
+}
+
+.resident-text {
+  margin-top: 0;
+}
+
+.question-box input,
+.mid-input-grid input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #cdbcf3;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.question-box button,
+.primary-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #8b5cf6;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.question-box button:hover,
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+.result {
+  min-height: 1.5em;
+  font-weight: bold;
+}
+
+.correct {
+  color: #1c7c54;
+}
+
+.wrong {
+  color: #b23a48;
+}
+
+.hidden {
+  display: none;
+}
+
+.mid-input-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.story-box {
+  margin-top: 16px;
+  background: #f5efff;
+}
+
+.next-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+@media (min-width: 700px) {
+  .mid-input-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
